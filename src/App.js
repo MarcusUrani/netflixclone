@@ -1,18 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import TMDB from "./Api/tmdb";
 
 function App() {
-  useEffect(() => {
-    //Pegando a lista dos filmes
-    const loadAll = async () => {
-      let list = TMDB.getHomeList();
-      console.log(list);
-    };
+  const [movieList, setMovieList] = useState([]);
+  //Pegando a lista dos filmes
+  const loadAll = async () => {
+    let list = await TMDB.getHomeList();
+    setMovieList(list);
+  };
 
+  useEffect(() => {
     loadAll();
   }, []);
-
-  return <h1>Hello World!</h1>;
+  console.log(movieList);
+  return (
+    <section className="page">
+      {movieList.map((item, id) => (
+        <h1 key={id}>{item.title}</h1>
+      ))}
+    </section>
+  );
 }
 
 export default App;
