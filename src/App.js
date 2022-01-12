@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./App.css";
 import TMDB from "./Api/tmdb";
 import List from "./Components/List";
 

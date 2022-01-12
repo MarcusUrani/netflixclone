@@ -1,0 +1,20 @@
+.homelist {
+    margin-bottom: 1.9rem;
+}
+
+.homelist__title {
+    font-size: 1.3rem;
+    margin-bottom: 1.9rem;
+}
+
+.homelist__listarea {
+    overflow-x: hidden;
+}
+
+.homelist__list {
+    display: flex;
+}
+
+.homelist__item {
+    margin: 0;
+}
