@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TMDB from "./Api/tmdb";
+import List from "./Components/List";
 
 function App() {
   const [movieList, setMovieList] = useState([]);
@@ -12,11 +13,10 @@ function App() {
   useEffect(() => {
     loadAll();
   }, []);
-  console.log(movieList);
   return (
     <section className="page">
       {movieList.map((item, id) => (
-        <h1 key={id}>{item.title}</h1>
+        <List key={id} title={item.title} items={item.items} />
       ))}
     </section>
   );

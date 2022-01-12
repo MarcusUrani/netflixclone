@@ -23,14 +23,14 @@ export default {
         slug: "trending",
         title: "Recomendações para Você",
         items: await basicFetch(
-          `/trending/all/week?language=pt-BR&api_key=${API_KEY}`
+          `/movie/top_rated?language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
         slug: "toprated",
         title: "Em Alta",
         items: await basicFetch(
-          `/movie/top_rated?language=pt-BR&api_key=${API_KEY}`
+          `/trending/all/week?language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
