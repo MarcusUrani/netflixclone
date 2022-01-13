@@ -4,17 +4,31 @@
 
 .homelist__title {
     font-size: 1.3rem;
-    margin-bottom: 1.9rem;
+    margin-left: 1.9rem;
 }
 
 .homelist__listarea {
+    padding-left: 1.9rem;
     overflow-x: hidden;
 }
 
 .homelist__list {
-    display: flex;
+    width: 999999999px;
 }
 
 .homelist__item {
+    display: inline-block;
     margin: 0;
+    width: 150px;
+}
+
+.homelist__item img {
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: all ease .3s;
+    width: 100%;
+}
+
+.homelist__item img:hover {
+    transform: scale(1);
 }
