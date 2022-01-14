@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import TMDB from "./Api/tmdb";
 import List from "./Components/List";
-import FeaturedMovie from "./Components/FeaturedMovie";
+import FeaturedItem from "./Components/FeaturedItem";
+import tmdb from "./Api/tmdb";
 
 function App() {
   const [movieList, setMovieList] = useState([]);
@@ -19,7 +20,8 @@ function App() {
       Math.random() * (originals[0].items.results.length - 1)
     );
     let chosen = originals[0].items.results[randomChoice];
-    setFeaturedData(chosen);
+    let chosenInfo = await tmdb.getItemInfo(chosen.id, 'tv');
+    setFeaturedData(chosenInfo);
   };
 
   useEffect(() => {
@@ -27,7 +29,7 @@ function App() {
   }, []);
   return (
     <section className="page">
-      {featuredData && <FeaturedMovie item={featuredData} />}
+      {featuredData && <FeaturedItem item={featuredData} />}
       {movieList.map((item, id) => (
         <List key={id} title={item.title} items={item.items} />
       ))}

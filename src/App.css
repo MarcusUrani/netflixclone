@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+h1, section, p, article, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #111;
     color: #fff;

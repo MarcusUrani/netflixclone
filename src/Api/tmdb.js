@@ -70,4 +70,27 @@ export default {
       },
     ];
   },
+  getItemInfo: async (itemId, itemType) => {
+    let info = {};
+
+    if (itemId) {
+      switch (itemType) {
+        case "movie":
+          info = await basicFetch(
+            `/movie/${itemId}?language=pt-BR&api_key=${API_KEY}`
+          );
+          break;
+        case "tv":
+          info = await basicFetch(
+            `/tv/${itemId}?language=pt-BR&api_key=${API_KEY}`
+          );
+          break;
+        default:
+          info = null;
+          break;
+      }
+    }
+
+    return info;
+  },
 };

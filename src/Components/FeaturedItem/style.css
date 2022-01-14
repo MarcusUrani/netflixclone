@@ -1,0 +1,77 @@
+.featured {
+    height: 100vh;
+}
+
+.featured__vertical, 
+.featured__horizontal {
+    height: inherit;
+    width: inherit;
+}
+
+.featured__vertical {
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featured__horizontal {
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.875rem;
+}
+
+.featured__name {
+    font-size: 3.75rem;
+}
+
+.featured__info {
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: bold;
+    gap: .8rem;
+    margin-top: .95rem;
+}
+
+.featured__points {
+    color: #46d369;
+}
+
+.featured__description {
+    color: #999;
+    font-size: 1.1875rem;
+    margin: .8rem 0 1.75rem 0;
+    width: 45%;
+}
+
+.featured__play,
+.featured__myList {
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: .625rem;
+    opacity: 1;
+    padding: .75rem 1.5625rem;
+    text-decoration: none;
+    transition: all ease .3s;
+}
+
+.featured__play:hover,
+.featured__myList:hover {
+    opacity: .7;
+}
+
+.featured__play {
+    background: #FFF;
+    color: #111;
+}
+
+.featured__myList {
+    background: #333;
+    color: #FFF;
+}
+
+.featured__genres {
+    color: #999;
+    font-size: 1.125rem;
+    margin-top: 1.2rem;
+}
