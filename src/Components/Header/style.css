@@ -1,0 +1,34 @@
+header {
+    align-items: center;
+    display: flex;
+    height: 4.375rem;
+    justify-content: space-between;
+    left: 0;
+    padding: 0 1.875rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all ease .5s;
+    z-index: 999;
+}
+
+header.black {
+    background-color: #141414;
+}
+
+.header__logo {
+    height: 1.875rem;
+}
+
+.header__logo img{
+    height: 100%;
+}
+
+.header__user {
+    height: 2.2875rem
+}
+
+.header__user img {
+    border-radius: 0.1875rem;
+    height: 100%;
+}
