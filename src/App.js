@@ -5,6 +5,7 @@ import List from "./Components/List";
 import FeaturedItem from "./Components/FeaturedItem";
 import tmdb from "./Api/tmdb";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 function App() {
   const [movieList, setMovieList] = useState([]);
@@ -50,6 +51,7 @@ function App() {
           <List key={id} title={item.title} items={item.items} />
         ))}
       </section>
+      <Footer />
     </section>
   );
 }

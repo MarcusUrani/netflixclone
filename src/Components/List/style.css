@@ -32,3 +32,32 @@
 .homelist__item img:hover {
     transform: scale(1);
 }
+
+.homelist__left,
+.homelist__right {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    height: 14.0625rem;
+    justify-content: center;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: all ease .5s;
+    width: 2.5rem;
+    z-index: 99;
+}
+
+.homelist__left {
+    left: 0;
+}
+
+.homelist__right {
+    right: 0;
+}
+
+.homelist:hover .homelist__left,
+.homelist:hover .homelist__right {
+    opacity: 1;
+}

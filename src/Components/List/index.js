@@ -1,12 +1,20 @@
 import React from "react";
 import "./style.css";
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 const List = ({ title, items }) => {
   return (
     <section className="homelist">
       <h1 className="homelist__title">{title}</h1>
+      <section className="homelist__left">
+        <NavigateBeforeIcon style={{ fontSize: 50 }} />
+      </section>
+      <section className="homelist__right">
+        <NavigateNextIcon style={{ fontSize: 50 }} />
+      </section>
       <div className="homelist__listarea">
-        <div className="homelist__list">
+        <section className="homelist__list">
           {items.results.length > 0 &&
             items.results.map((item, id) => (
               <figure key={id} className="homelist__item">
@@ -16,7 +24,7 @@ const List = ({ title, items }) => {
                 />
               </figure>
             ))}
-        </div>
+        </section>
       </div>
     </section>
   );

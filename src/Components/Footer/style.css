@@ -1,0 +1,13 @@
+footer {
+    margin: 3.125rem 0;
+    text-align: center;
+}
+
+.footer__link {
+    color: #fff;
+    transition: all ease .3s;
+}
+
+.footer__link:hover {
+    color: #E50914;
+}
