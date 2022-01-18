@@ -52,6 +52,15 @@ function App() {
         ))}
       </section>
       <Footer />
+      {movieList.length <= 0 && (
+        <figure className="loading-animation">
+          <img
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+            alt="Carregando"
+            style={{ width: window.innerWidth }}
+          />
+        </figure>
+      )}
     </section>
   );
 }

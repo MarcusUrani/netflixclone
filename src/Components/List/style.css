@@ -13,7 +13,7 @@
 }
 
 .homelist__list {
-    width: 999999999px;
+    transition: all ease .7s;
 }
 
 .homelist__item {
@@ -60,4 +60,11 @@
 .homelist:hover .homelist__left,
 .homelist:hover .homelist__right {
     opacity: 1;
+}
+
+@media(max-width:760px) {
+    .homelist__left,
+    .homelist__right {
+        opacity: 1;
+    }
 }

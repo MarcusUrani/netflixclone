@@ -8,6 +8,11 @@ const FeaturedItem = ({ item }) => {
     genres.push(item.genres[i].name);
   }
 
+  let description = item.overview;
+  if (description.length > 250) {
+    description = description.substring(0, 250) + "...";
+  }
+
   return (
     <section
       className="featured"
@@ -29,7 +34,7 @@ const FeaturedItem = ({ item }) => {
             </p>
           </section>
           <article className="featured__description">
-            <p>{item.overview}</p>
+            <p>{description}</p>
           </article>
           <section className="featured__buttons">
             <a href={`/watch/${item.id}`} className="featured__play">
